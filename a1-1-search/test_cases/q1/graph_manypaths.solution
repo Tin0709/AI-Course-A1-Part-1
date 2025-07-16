@@ -1,0 +1,10 @@
+# This is the solution file for test_cases/q1/graph_manypaths.test.
+# This solution is designed to support both right-to-left
+# and left-to-right implementations.
+# this would work for late and early goal tests both
+
+# Solutions as per AIMA implementation graph-search DFS
+solution:  "1:A->C 0:C->D 1:D->F 0:F->G"
+solution_expanded_states: "A B2 C D E2 F"
+solution_rev: "1:A->C 0:C->D 1:D->F 0:F->G"
+solution_rev_expanded_states: "A B1 C D E1 F"

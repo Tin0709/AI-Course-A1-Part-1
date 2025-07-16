@@ -1,0 +1,56 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 .SFNS-Regular;
+\f3\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;}
+{\colortbl;\red255\green255\blue255;\red14\green14\blue14;}
+{\*\expandedcolortbl;;\cssrgb\c6700\c6700\c6700;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tqr\tx260\tx420\li420\fi-420\sl324\slmult1\sb240\partightenfactor0
+
+\f0\fs28 \cf2 	1.	
+\f1\b Question 1 \'96 Depth-First Search
+\f2\b0 \
+We wrote 
+\f3 depthFirstSearch(problem)
+\f2  to do a graph-search DFS: push the start state onto a LIFO stack, then loop popping states, skipping already-visited ones, and pushing each unvisited successor (along with the action-path to reach it). As soon as we hit a goal state, we return the action sequence that got us there.\
+
+\f0 	2.	
+\f1\b Question 2 \'96 Breadth-First Search
+\f2\b0 \
+We wrote 
+\f3 breadthFirstSearch(problem)
+\f2  using a FIFO queue. We enqueue the start state (marking it visited immediately), then in each step dequeue a state, check for goal, and enqueue each unvisited successor (recording the path). This guarantees we explore by increasing path\uc0\u8208 length.\
+
+\f0 	3.	
+\f1\b Question 3 \'96 Uniform-Cost Search
+\f2\b0 \
+We implemented 
+\f3 uniformCostSearch(problem)
+\f2  with a priority queue keyed by the total cost so far (
+\f3 g(n)
+\f2 ). We store in a 
+\f3 visited
+\f2  map the best cost found to each state, and when we pop a state we expand its successors, updating the queue whenever we find a cheaper path to a state. As usual, once we pop a goal state its 
+\f3 g
+\f2 -cost is minimal and we return its path.\
+
+\f0 	4.	
+\f1\b Question 4 \'96 A* Search
+\f2\b0 \
+We extended UCS in 
+\f3 aStarSearch(problem, heuristic)
+\f2  by using priorities of 
+\f3 g(n)+h(n)
+\f2  instead of just 
+\f3 g(n)
+\f2 , where 
+\f3 h
+\f2  is the admissible heuristic (defaulting to the trivial 
+\f3 nullHeuristic
+\f2 ). We keep the same best-cost map to avoid revisiting with higher costs.\
+
+\f0 	5.	
+\f1\b Question 5 \'96 Iterative Deepening Search
+\f2\b0 \
+We wrote 
+\f3 iterativeDeepeningSearch(problem)
+\f2  by repeatedly running a recursive depth-limited DFS (with its own local visited set) at increasing depth limits (0, 1, 2, \'85) until the goal is found. This gives you the space advantage of DFS with the optimality (on step-count) of BFS.}

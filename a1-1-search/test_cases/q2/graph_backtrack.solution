@@ -1,0 +1,13 @@
+# This is the solution file for test_cases/q2/graph_backtrack.test.
+# This solution is designed to support both right-to-left
+# and left-to-right implementations.
+solution: "1:A->C 0:C->G"
+solution_expanded_states: "A B C D"
+solution_rev: "1:A->C 0:C->G"
+solution_rev_expanded_states: "A D C B"
+
+# early goal test
+solution_alt: "1:A->C 0:C->G"
+solution_alt_expanded_states: "A B C"
+solution_alt_rev: "1:A->C 0:C->G"
+solution_alt_rev_expanded_states: "A D C"

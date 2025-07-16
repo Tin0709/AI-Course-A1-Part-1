@@ -1,0 +1,9 @@
+# This solution is designed to support both right-to-left
+# and left-to-right implementations.
+solution: "Right Right"
+solution_expanded_states: "A A E B"
+solution_rev: "Right Right"
+solution_rev_expanded_states: "A A B"
+
+
+
